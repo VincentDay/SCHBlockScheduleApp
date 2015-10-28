@@ -14,6 +14,9 @@
 		B81F2A6C1BE1639B00C3617A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81F2A6A1BE1639B00C3617A /* LaunchScreen.storyboard */; };
 		B81F2A771BE1639B00C3617A /* BlockScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A761BE1639B00C3617A /* BlockScheduleTests.swift */; };
 		B81F2A821BE1639B00C3617A /* BlockScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A811BE1639B00C3617A /* BlockScheduleUITests.swift */; };
+		B81F2A901BE1689500C3617A /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */; };
+		B81F2A921BE16CB700C3617A /* BlockScheduleCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A911BE16CB700C3617A /* BlockScheduleCore.swift */; };
+		B81F2A941BE16E7C00C3617A /* ConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A931BE16E7C00C3617A /* ConfigVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		B81F2A7D1BE1639B00C3617A /* BlockScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81F2A811BE1639B00C3617A /* BlockScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockScheduleUITests.swift; sourceTree = "<group>"; };
 		B81F2A831BE1639B00C3617A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		B81F2A911BE16CB700C3617A /* BlockScheduleCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockScheduleCore.swift; sourceTree = "<group>"; };
+		B81F2A931BE16E7C00C3617A /* ConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				B81F2A611BE1639B00C3617A /* AppDelegate.swift */,
 				B81F2A631BE1639B00C3617A /* ViewController.swift */,
+				B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */,
+				B81F2A931BE16E7C00C3617A /* ConfigVC.swift */,
+				B81F2A911BE16CB700C3617A /* BlockScheduleCore.swift */,
 				B81F2A651BE1639B00C3617A /* Main.storyboard */,
 				B81F2A681BE1639B00C3617A /* Assets.xcassets */,
 				B81F2A6A1BE1639B00C3617A /* LaunchScreen.storyboard */,
@@ -258,6 +267,9 @@
 			files = (
 				B81F2A641BE1639B00C3617A /* ViewController.swift in Sources */,
 				B81F2A621BE1639B00C3617A /* AppDelegate.swift in Sources */,
+				B81F2A901BE1689500C3617A /* ScheduleVC.swift in Sources */,
+				B81F2A921BE16CB700C3617A /* BlockScheduleCore.swift in Sources */,
+				B81F2A941BE16E7C00C3617A /* ConfigVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
