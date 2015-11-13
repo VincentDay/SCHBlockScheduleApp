@@ -8,7 +8,9 @@ import UIKit
 
 class ConfigVC: UIViewController
 {
-
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let classIDs = ["A","B","C","D","E","F","G"];
+    
     @IBOutlet weak var AclassTF: UITextField!
     @IBOutlet weak var BclassTF: UITextField!
     @IBOutlet weak var CclassTF: UITextField!
@@ -24,7 +26,15 @@ class ConfigVC: UIViewController
         //Look in NSUserDefaults and determine if there are previously
         //saved class/label mappings.  If so, fill them in to the TFs
         //*******
-        
+        let theTFs = [AclassTF, BclassTF, CclassTF, DclassTF, EclassTF, FclassTF, GclassTF]
+        for(var i = 0; i < self.classIDs.count; i++)
+        {
+            let tempVal = self.defaults.objectForKey(self.classIDs[i]);
+            if(tempVal != nil)
+            {
+                theTFs[i].text = tempVal as! String
+            }
+        }
         
         //this makes the keyboard show automatically and
         //puts the cursor in AclassTF
@@ -42,7 +52,7 @@ class ConfigVC: UIViewController
         //Update NSUserDefaults to store the current mappings
         //Either store the mappings as an NSArray of Strings
         //or store as 7 individual variables in NSUserDefaults
-        let defaults = NSUserDefaults.standardUserDefaults()
+        
         
         defaults.setObject(AclassTF.text, forKey: "A")
         defaults.setObject(BclassTF.text, forKey: "B")
@@ -55,6 +65,9 @@ class ConfigVC: UIViewController
         defaults.synchronize()
         
         print("A=\(AclassTF.text), B=\(BclassTF.text), C=\(CclassTF.text), D=\(DclassTF.text), E=\(EclassTF.text), F=\(FclassTF.text), G=\(GclassTF.text)")
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     @IBAction func cancelButtonClick(sender: AnyObject)

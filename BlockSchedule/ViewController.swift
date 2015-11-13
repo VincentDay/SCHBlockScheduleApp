@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    let defaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     @IBOutlet weak var day3Button: UIButton!
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
                 //scheduleVC.dayString = "Day \(i+1) was clicked!"
                 
                 //use the singleton
-                BlockScheduleCore.currDay = "Day \(i+1) was clicked!"
+                BlockScheduleCore.currDay = "Day \(i+1)"
                 
                 self.showViewController(scheduleVC, sender: nil)
                 
@@ -44,6 +46,26 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //Block Schedule
+        let theBlockSchedule = self.defaults.valueForKey("theBlockSchedule")
+        if(theBlockSchedule == nil)
+        {
+            var theBlockScheduleDict = [String : NSArray]()
+            theBlockScheduleDict["Day 1"] = "A,B,Break,C,D,Lunch,E,F,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 2"] = "G,A,Break,B,C,Lunch,D,E,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 3"] = "F,G,Break,A,B,Lunch,C,D,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 4"] = "E,F,Break,G,A,Lunch,B,C,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 5"] = "D,E,Break,F,G,Lunch,A,B,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 6"] = "C,D,Break,E,F,Lunch,G,A,SAS".componentsSeparatedByString(",")
+            theBlockScheduleDict["Day 7"] = "B,C,Break,D,E,Lunch,F,G,SAS".componentsSeparatedByString(",")
+            self.defaults.setValue(theBlockSchedule, forKey: "theBlockSchedule")
+            self.defaults.synchronize()
+            BlockScheduleCore.theBlockSchedule = theBlockScheduleDict
+        }
+        else
+        {
+            BlockScheduleCore.theBlockSchedule = theBlockSchedule as! [String: NSArray]
+        }
     }
 
     override func didReceiveMemoryWarning() {

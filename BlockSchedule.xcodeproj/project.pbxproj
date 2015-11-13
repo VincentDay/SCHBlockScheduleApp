@@ -494,6 +494,7 @@
 				B81F2A881BE1639B00C3617A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B81F2A891BE1639B00C3617A /* Build configuration list for PBXNativeTarget "BlockScheduleTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +503,7 @@
 				B81F2A8B1BE1639B00C3617A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B81F2A8C1BE1639B00C3617A /* Build configuration list for PBXNativeTarget "BlockScheduleUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +512,7 @@
 				B81F2A8E1BE1639B00C3617A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
