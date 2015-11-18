@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController
 {
@@ -45,6 +46,15 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //Parse Test
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject["name"] = "mike"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
         //Block Schedule
         let theBlockSchedule = self.defaults.valueForKey("theBlockSchedule")
