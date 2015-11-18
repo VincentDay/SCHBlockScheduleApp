@@ -18,6 +18,8 @@
 		B81F2A901BE1689500C3617A /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */; };
 		B81F2A921BE16CB700C3617A /* BlockScheduleCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A911BE16CB700C3617A /* BlockScheduleCore.swift */; };
 		B81F2A941BE16E7C00C3617A /* ConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A931BE16E7C00C3617A /* ConfigVC.swift */; };
+		B84BBF571BFD2A2400669993 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF561BFD2A2400669993 /* LoginVC.swift */; };
+		B84BBF591BFD2C3F00669993 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF581BFD2C3F00669993 /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		B81F2A911BE16CB700C3617A /* BlockScheduleCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockScheduleCore.swift; sourceTree = "<group>"; };
 		B81F2A931BE16E7C00C3617A /* ConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigVC.swift; sourceTree = "<group>"; };
+		B84BBF561BFD2A2400669993 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B84BBF581BFD2C3F00669993 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		F098BF6A7F78D9845ACCFABB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE11022FE5B3DEF2B3569E0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,8 @@
 		B81F2A601BE1639B00C3617A /* BlockSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				B84BBF581BFD2C3F00669993 /* RegisterVC.swift */,
+				B84BBF561BFD2A2400669993 /* LoginVC.swift */,
 				B81F2A611BE1639B00C3617A /* AppDelegate.swift */,
 				B81F2A631BE1639B00C3617A /* ViewController.swift */,
 				B81F2A8F1BE1689500C3617A /* ScheduleVC.swift */,
@@ -342,7 +348,9 @@
 			files = (
 				B81F2A641BE1639B00C3617A /* ViewController.swift in Sources */,
 				B81F2A621BE1639B00C3617A /* AppDelegate.swift in Sources */,
+				B84BBF571BFD2A2400669993 /* LoginVC.swift in Sources */,
 				B81F2A901BE1689500C3617A /* ScheduleVC.swift in Sources */,
+				B84BBF591BFD2C3F00669993 /* RegisterVC.swift in Sources */,
 				B81F2A921BE16CB700C3617A /* BlockScheduleCore.swift in Sources */,
 				B81F2A941BE16E7C00C3617A /* ConfigVC.swift in Sources */,
 			);
