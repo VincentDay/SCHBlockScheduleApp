@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class LoginVC: UIViewController
 {
 
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var errorTF: UILabel!
     
     override func viewDidLoad()
     {
@@ -24,6 +26,31 @@ class LoginVC: UIViewController
 
     @IBAction func loginButtonPressed(sender: AnyObject)
     {
+        if(self.usernameTF.text?.characters.count == 0)
+        {
+            self.errorTF.text = "You must enter a username"
+        }
+        else if(self.passwordTF.text?.characters.count == 0)
+        {
+            self.errorTF.text = "You must enter a password"
+        }
+        else
+        {
+            PFUser.logInWithUsernameInBackground(self.usernameTF.text!, password: self.passwordTF.text!, block: { (user: PFUser?, error: NSError?) -> Void in
+                if(user != nil)
+                {
+                    //user was successfully logged in
+                    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SelectDayMainScreen") as! ViewController
+                    self.presentViewController(vc, animated: true, completion: nil)
+                    
+                }
+                else
+                {
+                    self.errorTF.text = "Bad username/password"
+                }
+            })
+        }
+
     }
     
     override func didReceiveMemoryWarning() {

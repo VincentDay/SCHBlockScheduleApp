@@ -47,20 +47,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgY-Jt-wEM">
-                                <rect key="frame" x="134" y="198" width="52" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFl-2L-fHj">
+                                <rect key="frame" x="20" y="170" width="280" height="21"/>
                                 <animations/>
-                                <state key="normal" title="old app"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zKk-gv-w4A"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="errorTF" destination="XFl-2L-fHj" id="lhF-hS-vaw"/>
                         <outlet property="passwordTF" destination="U9Z-rk-nmY" id="2xe-UX-eKv"/>
                         <outlet property="usernameTF" destination="5fe-qS-afE" id="SUt-Mh-GJ9"/>
                     </connections>
@@ -72,7 +72,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlockSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectDayMainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="BlockSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -254,8 +254,16 @@
                                 <animations/>
                                 <items>
                                     <navigationItem title="RegisterVC" id="YCv-O7-Mzt">
-                                        <barButtonItem key="leftBarButtonItem" title="cancel" id="r3W-HL-94M"/>
-                                        <barButtonItem key="rightBarButtonItem" title="create" id="CNk-65-lxK"/>
+                                        <barButtonItem key="leftBarButtonItem" title="cancel" id="r3W-HL-94M">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="Qao-WU-yOb" id="cvF-qW-YQE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="create" id="CNk-65-lxK">
+                                            <connections>
+                                                <action selector="createButtonPressed:" destination="Qao-WU-yOb" id="1Yu-BB-iUi"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -281,13 +289,27 @@
                                 <rect key="frame" x="20" y="218" width="280" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-g6-0Qj">
+                                <rect key="frame" x="20" y="256" width="280" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="confirmPasswordTF" destination="0b1-2w-xO6" id="AhV-ft-3Gb"/>
+                        <outlet property="emailTF" destination="hYt-GV-lxR" id="AB1-fw-uhL"/>
+                        <outlet property="errorTF" destination="MVD-g6-0Qj" id="bBl-6d-VPX"/>
+                        <outlet property="passwordTF" destination="77O-f8-Flt" id="TJM-u1-WtY"/>
+                        <outlet property="usernameTF" destination="JXp-GM-dHw" id="E7y-e3-qPF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGm-Gz-Ujd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

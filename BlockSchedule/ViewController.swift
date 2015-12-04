@@ -47,14 +47,6 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        //Parse Test
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject["name"] = "mike"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        }
-        
         // Do any additional setup after loading the view, typically from a nib.
         //Block Schedule
         let theBlockSchedule = self.defaults.valueForKey("theBlockSchedule")
