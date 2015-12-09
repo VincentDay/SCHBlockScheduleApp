@@ -6,6 +6,8 @@
 //  Copyright © 2015 Michael Litman. All rights reserved.
 //
 
+//*******Lookup correct classes from BlockScheduleCore for the required class ID
+
 import UIKit
 
 class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource

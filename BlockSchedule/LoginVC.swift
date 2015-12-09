@@ -40,8 +40,19 @@ class LoginVC: UIViewController
                 if(user != nil)
                 {
                     //user was successfully logged in
-                    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SelectDayMainScreen") as! ViewController
-                    self.presentViewController(vc, animated: true, completion: nil)
+                    BlockScheduleCore.currentUser = user
+                    let query = PFQuery(className:"BlockClassMap")
+                    query.whereKey("owner_id", equalTo:user!)
+                    
+                    query.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) -> Void in
+                        if(objects != nil)
+                        {
+                            BlockScheduleCore.blockClassMapping = objects!
+                            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SelectDayMainScreen") as! ViewController
+                            self.presentViewController(vc, animated: true, completion: nil)
+                        }
+                    })
+                    
                     
                 }
                 else
