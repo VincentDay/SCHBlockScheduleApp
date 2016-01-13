@@ -14,6 +14,7 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     let defaults = NSUserDefaults.standardUserDefaults()
     let classIDs = ["A","B","C","D","E","F","G"];
+    let timeSlots = ["8:05 - 8:55","9:00 - 9:50", "9:55 - 10:35","10:40 - 11:30", "11:35 - 12:25", "12:30 - 1:10", "1:15 - 2:05","2:10 - 3:00", "3:05 - 3:45"]
     var theMappings = [String]()
     
     @IBOutlet weak var theLabel: UILabel!
@@ -67,12 +68,14 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let val = BlockScheduleCore.theBlockSchedule[BlockScheduleCore.currDay]![indexPath.row] as! String
         if(self.classIDs.contains(val))
         {
-            cell.textLabel!.text = self.theMappings[self.classIDs.indexOf(val)!]
+            
+            cell.textLabel!.text = BlockScheduleCore.getPFObjectForClass(self.theMappings[self.classIDs.indexOf(val)!])?.valueForKey("courseName") as! String
         }
         else
         {
             cell.textLabel!.text = val
         }
+        cell.detailTextLabel!.text = self.timeSlots[indexPath.row]
         return cell
     }
 

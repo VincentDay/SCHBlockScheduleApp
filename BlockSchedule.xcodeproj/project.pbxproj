@@ -20,6 +20,8 @@
 		B81F2A941BE16E7C00C3617A /* ConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A931BE16E7C00C3617A /* ConfigVC.swift */; };
 		B84BBF571BFD2A2400669993 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF561BFD2A2400669993 /* LoginVC.swift */; };
 		B84BBF591BFD2C3F00669993 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF581BFD2C3F00669993 /* RegisterVC.swift */; };
+		B862517D1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png in Resources */ = {isa = PBXBuildFile; fileRef = B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */; };
+		B862517F1C46FCF600C3D64B /* schoolSeal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B862517E1C46FCF600C3D64B /* schoolSeal.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B81F2A931BE16E7C00C3617A /* ConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigVC.swift; sourceTree = "<group>"; };
 		B84BBF561BFD2A2400669993 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B84BBF581BFD2C3F00669993 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoHeaderSCH_435x65.png; sourceTree = "<group>"; };
+		B862517E1C46FCF600C3D64B /* schoolSeal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schoolSeal.jpg; sourceTree = "<group>"; };
 		F098BF6A7F78D9845ACCFABB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE11022FE5B3DEF2B3569E0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 		B81F2A601BE1639B00C3617A /* BlockSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				B86251791C46FC4300C3D64B /* images */,
 				B84BBF581BFD2C3F00669993 /* RegisterVC.swift */,
 				B84BBF561BFD2A2400669993 /* LoginVC.swift */,
 				B81F2A611BE1639B00C3617A /* AppDelegate.swift */,
@@ -162,6 +167,15 @@
 				B81F2A831BE1639B00C3617A /* Info.plist */,
 			);
 			path = BlockScheduleUITests;
+			sourceTree = "<group>";
+		};
+		B86251791C46FC4300C3D64B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B862517E1C46FCF600C3D64B /* schoolSeal.jpg */,
+				B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B81F2A6C1BE1639B00C3617A /* LaunchScreen.storyboard in Resources */,
+				B862517D1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png in Resources */,
+				B862517F1C46FCF600C3D64B /* schoolSeal.jpg in Resources */,
 				B81F2A691BE1639B00C3617A /* Assets.xcassets in Resources */,
 				B81F2A671BE1639B00C3617A /* Main.storyboard in Resources */,
 			);

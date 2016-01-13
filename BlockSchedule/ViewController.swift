@@ -19,6 +19,12 @@ class ViewController: UIViewController
     @IBOutlet weak var day6Button: UIButton!
     @IBOutlet weak var day7Button: UIButton!
 
+    @IBAction func logoutButtonPressed(sender: AnyObject)
+    {
+        PFUser.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func dayButtonClicked(sender: UIButton)
     {
         //determine which of our buttons above was clicked

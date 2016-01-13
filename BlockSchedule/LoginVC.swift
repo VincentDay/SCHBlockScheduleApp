@@ -19,11 +19,41 @@ class LoginVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.usernameTF.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        self.usernameTF.text = ""
+        self.passwordTF.text = ""
+        if(PFUser.currentUser() != nil)
+        {
+            self.transitionToMainScreen(PFUser.currentUser()!)
+        }
+        else
+        {
+            self.usernameTF.becomeFirstResponder()
+        }
+    }
+    
+    func transitionToMainScreen(user : PFUser)
+    {
+        //user was successfully logged in
+        BlockScheduleCore.currentUser = user
+        let query = PFQuery(className:"BlockClassMap")
+        query.whereKey("owner_id", equalTo:user)
+        
+        query.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) -> Void in
+            if(objects != nil)
+            {
+                BlockScheduleCore.blockClassMapping = objects!
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SelectDayMainScreen") as! ViewController
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+        })
+    }
+    
     @IBAction func loginButtonPressed(sender: AnyObject)
     {
         if(self.usernameTF.text?.characters.count == 0)
@@ -40,20 +70,7 @@ class LoginVC: UIViewController
                 if(user != nil)
                 {
                     //user was successfully logged in
-                    BlockScheduleCore.currentUser = user
-                    let query = PFQuery(className:"BlockClassMap")
-                    query.whereKey("owner_id", equalTo:user!)
-                    
-                    query.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) -> Void in
-                        if(objects != nil)
-                        {
-                            BlockScheduleCore.blockClassMapping = objects!
-                            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SelectDayMainScreen") as! ViewController
-                            self.presentViewController(vc, animated: true, completion: nil)
-                        }
-                    })
-                    
-                    
+                    self.transitionToMainScreen(user!)
                 }
                 else
                 {

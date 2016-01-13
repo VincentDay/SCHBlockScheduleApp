@@ -64,8 +64,7 @@ class RegisterVC: UIViewController {
                         obj["owner_id"] = user
                         obj["classID"] = id
                         obj["courseName"] = "Name Class"
-                        obj.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-                        })
+                        try! obj.save()
                     }
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
