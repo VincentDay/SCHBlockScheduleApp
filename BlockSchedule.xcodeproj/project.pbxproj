@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D899BCB07244877C08FDDAE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472006BF067CCC663DA7CB40 /* Pods.framework */; };
+		68CD3AA61C4B069700B76935 /* schoolSeal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68CD3AA51C4B069700B76935 /* schoolSeal.jpg */; };
 		B81F2A621BE1639B00C3617A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A611BE1639B00C3617A /* AppDelegate.swift */; };
 		B81F2A641BE1639B00C3617A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F2A631BE1639B00C3617A /* ViewController.swift */; };
 		B81F2A671BE1639B00C3617A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81F2A651BE1639B00C3617A /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		B84BBF571BFD2A2400669993 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF561BFD2A2400669993 /* LoginVC.swift */; };
 		B84BBF591BFD2C3F00669993 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BBF581BFD2C3F00669993 /* RegisterVC.swift */; };
 		B862517D1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png in Resources */ = {isa = PBXBuildFile; fileRef = B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */; };
-		B862517F1C46FCF600C3D64B /* schoolSeal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B862517E1C46FCF600C3D64B /* schoolSeal.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		472006BF067CCC663DA7CB40 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68CD3AA51C4B069700B76935 /* schoolSeal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schoolSeal.jpg; sourceTree = "<group>"; };
 		B81F2A5E1BE1639B00C3617A /* BlockSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81F2A611BE1639B00C3617A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B81F2A631BE1639B00C3617A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		B84BBF561BFD2A2400669993 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B84BBF581BFD2C3F00669993 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoHeaderSCH_435x65.png; sourceTree = "<group>"; };
-		B862517E1C46FCF600C3D64B /* schoolSeal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schoolSeal.jpg; sourceTree = "<group>"; };
 		F098BF6A7F78D9845ACCFABB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE11022FE5B3DEF2B3569E0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,7 +172,7 @@
 		B86251791C46FC4300C3D64B /* images */ = {
 			isa = PBXGroup;
 			children = (
-				B862517E1C46FCF600C3D64B /* schoolSeal.jpg */,
+				68CD3AA51C4B069700B76935 /* schoolSeal.jpg */,
 				B862517C1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png */,
 			);
 			name = images;
@@ -287,7 +287,7 @@
 			files = (
 				B81F2A6C1BE1639B00C3617A /* LaunchScreen.storyboard in Resources */,
 				B862517D1C46FC7D00C3D64B /* logoHeaderSCH_435x65.png in Resources */,
-				B862517F1C46FCF600C3D64B /* schoolSeal.jpg in Resources */,
+				68CD3AA61C4B069700B76935 /* schoolSeal.jpg in Resources */,
 				B81F2A691BE1639B00C3617A /* Assets.xcassets in Resources */,
 				B81F2A671BE1639B00C3617A /* Main.storyboard in Resources */,
 			);

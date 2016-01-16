@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,15 +15,34 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logoHeaderSCH_435x65.png" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-Rl-SMM">
+                                <rect key="frame" x="5" y="238" width="404" height="65"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="schoolSeal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ucd-8c-GMt">
+                                <rect key="frame" x="132" y="347" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BdW-Rl-SMM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-15" id="N0k-Fd-7aJ"/>
+                            <constraint firstItem="BdW-Rl-SMM" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="218" id="RFc-1R-VlI"/>
+                            <constraint firstItem="BdW-Rl-SMM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oKe-A0-SP7"/>
+                            <constraint firstItem="Ucd-8c-GMt" firstAttribute="top" secondItem="BdW-Rl-SMM" secondAttribute="bottom" constant="44" id="sSB-ns-nkg"/>
+                            <constraint firstItem="Ucd-8c-GMt" firstAttribute="centerX" secondItem="BdW-Rl-SMM" secondAttribute="centerX" id="sYS-Lj-kzp"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logoHeaderSCH_435x65.png" width="435" height="65"/>
+        <image name="schoolSeal.jpg" width="150" height="150"/>
+    </resources>
 </document>
